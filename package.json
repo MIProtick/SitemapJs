@@ -1,0 +1,25 @@
+{
+  "name": "scrapper_evaly",
+  "version": "1.0.0",
+  "description": "Scrapper to make a site map of urls in one of the most popular online marketplace in Bangladesh using Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MIProtick/ScrapperJs.git"
+  },
+  "keywords": [
+    "scrapper",
+    "puppeteer",
+    "evaly",
+    "nodejs"
+  ],
+  "author": "Mezbaul Islam Protick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MIProtick/ScrapperJs/issues"
+  },
+  "homepage": "https://github.com/MIProtick/ScrapperJs#readme"
+}
