@@ -16,12 +16,12 @@ A scrapper to make a site map of urls for any website using Nodejs and Puppeteer
 ## Scrapy Steps 
 
 * **Step1:** *Clone Project*
-  ```cmd
+  ```shell
   git clone https://github.com/MIProtick/SitemapJs.git
   cd SitemapJs
   ``` 
 * **Step2:** *Install dependencies*
-  ```bat
+  ```sh
   npm install
   cd SitemapJs
   ```
