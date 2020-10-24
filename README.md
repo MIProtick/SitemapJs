@@ -26,7 +26,7 @@ A scrapper to make a site map of urls for any website, using Nodejs and Puppetee
   ```
 * **Step3:** *Start scrapping*
   ```
-  npm start entire
+  npm run entire
   ```
 * **Step4:** *Open [`sitemap.json`](./sitemap.json)*
 
