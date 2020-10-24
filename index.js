@@ -2,7 +2,7 @@ const fs = require('fs');
 const puppeteer = require('puppeteer');
 
 
-// Basic Configuration
+// Basic Configuration[Edit here]
 const base = [{
     url:'https://evaly.com.bd',
     maps:[],

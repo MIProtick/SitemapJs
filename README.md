@@ -10,7 +10,7 @@
 &nbsp;
 ## Descriptions 
 
-A scrapper to make a site map of urls for any website, using Nodejs and Puppeteer.
+A scrapper to make a site map of urls for any website using Nodejs and Puppeteer.
 
 &nbsp;
 ## Scrapy Steps 
@@ -24,11 +24,18 @@ A scrapper to make a site map of urls for any website, using Nodejs and Puppetee
   ```
   npm install
   ```
-* **Step3:** *Start scrapping*
+* **Step3:** *Edit configuration*
+  ```javascript
+  const base -> Object
+  const haspreloader -> Boolean
+  const preloader_handle -> String
+  const depth -> Number
+  ```
+* **Step4:** *Start scrapping*
   ```
   npm run entire
   ```
-* **Step4:** *Open [`sitemap.json`](./sitemap.json)*
+* **Step5:** *Open [`sitemap.json`](./sitemap.json)*
 
 &nbsp;
 ## References 
