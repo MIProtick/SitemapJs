@@ -1,36 +1,35 @@
-# scrapper_evaly
+# SitemapJs
 
 ## Table of Contents
-
-- [scrapper_evaly](#scrapper_evaly)
+- [SitemapJs](#sitemapjs)
   - [Table of Contents](#table-of-contents)
-    - [Descriptions](#descriptions)
-    - [Scrapy Steps](#scrapy-steps)
+  - [Descriptions](#descriptions)
+  - [Scrapy Steps](#scrapy-steps)
   - [References](#references)
 
-### Descriptions 
+&nbsp;
+## Descriptions 
 
-A scrapper to make a site map of urls of [Evaly](https://evaly.com.bd/), one of the most popular online marketplace in Bangladesh, using Nodejs and Puppeteer.
+A scrapper to make a site map of urls for any website, using Nodejs and Puppeteer.
 
+&nbsp;
+## Scrapy Steps 
 
-### Scrapy Steps 
+* **Step1:** *Clone Project*
+  ```
+  git clone git@github.com:MIProtick/SitemapJs.git
+  cd SitemapJs
+  ``` 
+* **Step2:** *Install dependencies*
+  ```
+  npm install
+  ```
+* **Step3:** *Start scrapping*
+  ```
+  npm start
+  ```
+* **Step4:** *Open [`sitemap.json`](./sitemap.json)*
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
+&nbsp;
 ## References 
-
-Add notes about how to use the system.
+In this project I have made a sitemap for *[Evaly](https://evaly.com.bd/)*, one of the most popular online marketplace in Bangladesh.

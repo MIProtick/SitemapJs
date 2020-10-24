@@ -1,4 +1,3 @@
-// Import Required Lib
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
@@ -8,22 +7,24 @@ const base = [{
     url:'https://evaly.com.bd',
     maps:[],
 }];
+const haspreloader = true;
 const preloader_handle = 'button.absolute';
+const depth = 4;
 
 
-async function scrape(lnkobj, n){
-    let browser = await puppeteer.launch();
-    let page = await browser.newPage();
-    await page.setDefaultNavigationTimeout(0);
+// Recurcive Scrape for sitemap
+async function scrape(lnkobj, n, page){
     await page.goto(lnkobj.url);
-    console.log('scraping: ' + lnkobj.url);
+    console.log('n_'+n+':: scraping: ' + lnkobj.url);
 
+    // handle preloader
     try {
-        await page.click(preloader_handle);
+        if (haspreloader && n <= 1) await page.click(preloader_handle);
     } catch (error) {
         console.log('error:: preloader');
     }
 
+    // Fetch URL's
     let urls = await page.evaluate((bu) => {
         let results = [];
         let items = document.querySelectorAll('a');
@@ -45,27 +46,38 @@ async function scrape(lnkobj, n){
         });
         return results;
     }, base[0].url)
-    await browser.close();
+
+    // Send for recursion
     try {
         lnkobj.maps = [...urls]
+        if(n <= (depth-1)){
+            for (let j = 0; j < lnkobj.maps.length; j++) {
+                await scrape(lnkobj.maps[j], n+1, page);
+            }
+        }
     } catch (error) {
         console.log('error:: ' + typeof url + ' links');
     }
 }
 
+
+// Run bot
 async function main(base){
-    n = 1;
-    var tempbase = base;
-    while(n<=2){
-        console.log('n: ' + n);
-        console.log('tempbase: ' + tempbase.length);
-        for (let i = 0; i < tempbase.length; i++) {
-            await scrape(tempbase[i], n);
-        }
-        tempbase = tempbase[0].maps
-        n += 1;
-    }
-    // fs.writeFileSync('links.json', JSON.stringify(base));
+    var n = 1;
+
+    let browser = await puppeteer.launch(); // open browser
+    let page = await browser.newPage();     // open tab
+    await page.setDefaultNavigationTimeout(0);
+
+    var tstart = new Date().getTime(); // start time for Scraping 
+
+    await scrape(base[0], n, page);
+    await browser.close();
+
+    fs.writeFileSync('sitemap.json', JSON.stringify(base)); //save sitemap in json file
     console.log(JSON.parse(JSON.stringify(base)));
+
+    console.log('\n\n\n');
+    console.log('finished within(second): '+ (new Date().getTime() - tstart));
 } 
 main(base)
