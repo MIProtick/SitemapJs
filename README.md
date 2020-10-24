@@ -21,9 +21,8 @@ A scrapper to make a site map of urls for any website using Nodejs and Puppeteer
   cd SitemapJs
   ``` 
 * **Step2:** *Install dependencies*
-  ```sh
+  ```shell
   npm install
-  cd SitemapJs
   ```
 * **Step3:** *Edit configuration*
   ```javascript
