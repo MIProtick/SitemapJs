@@ -9,7 +9,7 @@ const base = [{
 }];
 const haspreloader = true;
 const preloader_handle = 'button.absolute';
-const depth = 4;
+const depth = 3;
 
 
 // Recurcive Scrape for sitemap

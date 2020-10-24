@@ -17,7 +17,7 @@ A scrapper to make a site map of urls for any website, using Nodejs and Puppetee
 
 * **Step1:** *Clone Project*
   ```
-  git clone git@github.com:MIProtick/SitemapJs.git
+  git clone https://github.com/MIProtick/SitemapJs.git
   cd SitemapJs
   ``` 
 * **Step2:** *Install dependencies*
@@ -26,7 +26,7 @@ A scrapper to make a site map of urls for any website, using Nodejs and Puppetee
   ```
 * **Step3:** *Start scrapping*
   ```
-  npm start
+  npm start entire
   ```
 * **Step4:** *Open [`sitemap.json`](./sitemap.json)*
 
