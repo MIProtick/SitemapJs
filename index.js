@@ -1,5 +1,3 @@
-
-
 // Basic Configuration[Edit here]
 var base = [{
     url:'https://evaly.com.bd',
