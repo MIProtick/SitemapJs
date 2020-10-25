@@ -32,10 +32,15 @@ A scrapper to make a site map of urls for any website using Nodejs and Puppeteer
   const depth -> Number
   ```
 * **Step4:** *Start scrapping*
-  ```
-  npm run entire
-  ```
-* **Step5:** *Open [`sitemap.json`](./sitemap.json)*
+  * _Entire_
+    ```shell
+    npm run scraper -- entire
+    ```
+  * _Simplified_
+    ```bat
+    npm run scraper -- simplified
+    ```
+* **Step5:** *Open results in [`sitemap_tree`](./simplified/)*
 
 &nbsp;
 ## References 
