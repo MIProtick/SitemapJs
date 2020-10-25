@@ -7,9 +7,12 @@ var haspreloader = true;
 var preloader_handle = 'button.absolute';
 var depth = 3;
 
+
 // parse Arguments
 var args = process.argv.slice(2);
 
+
+// Call Scraper
 if (args.length == 1) {
     if (args[0] == "entire"){
         const entire = require('./entire/index');
