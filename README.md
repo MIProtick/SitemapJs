@@ -40,7 +40,7 @@ A scrapper to make a site map of urls for any website using Nodejs and Puppeteer
     ```bat
     npm run scraper -- simplified
     ```
-* **Step5:** *Open results in [`sitemap_tree`](./simplified/)*
+* **Step5:** *Open results in [`sitemap_tree`](./sitemap_tree/)*
 
 &nbsp;
 ## References 
